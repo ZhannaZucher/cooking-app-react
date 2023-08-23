@@ -7,6 +7,9 @@ article {
 	background: $color3;
 	border-radius: 10px;
 	margin: 0 auto;
+	&:hover {
+		@include card-hover;
+	}
 	h2 {
 		color: $color4;
 		font-size: 1.4em;
@@ -24,7 +27,7 @@ article {
 	}
 	p {
 		padding-top: 16px;
-		font-size: 1.2em;
+		font-size: 1em;
 		width: 80%;
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
@@ -32,5 +35,6 @@ article {
 		text-overflow: ellipsis;
 		overflow: hidden;
 		line-height: 20px;
+		text-align: justify;
 	}
 }
