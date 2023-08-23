@@ -1,6 +1,7 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 import Article from "../components/Article"
+import { Link } from "react-router-dom"
 
 const Home = () => {
   const [data, setData] = useState([])
@@ -24,13 +25,14 @@ const Home = () => {
       </form>
       <main className="content">
         {data?.slice(0, 24).map((recipe) => (
-          <Article
-            key={recipe.idMeal}
-            title={recipe.strMeal}
-            origin={recipe.strArea}
-            image={recipe.strMealThumb}
-            content={recipe.strInstructions}
-          />
+          <Link key={recipe.idMeal} to={`/recipe/${recipe.idMeal}`}>
+            <Article
+              title={recipe.strMeal}
+              origin={recipe.strArea}
+              image={recipe.strMealThumb}
+              content={recipe.strInstructions}
+            />
+          </Link>
         ))}
       </main>
     </div>
