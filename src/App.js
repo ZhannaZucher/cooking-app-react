@@ -5,7 +5,7 @@ import Header from "./components/Header"
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="cooking-app-react">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
