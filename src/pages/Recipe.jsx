@@ -4,7 +4,9 @@ import { NavLink, useParams } from "react-router-dom"
 
 const Recipe = () => {
   const { id } = useParams()
+  const queryId = parseInt(id)
   const [recipe, setRecipe] = useState({})
+
   const ingredients = [
     recipe?.strIngredient1,
     recipe?.strIngredient2,
@@ -30,9 +32,9 @@ const Recipe = () => {
 
   useEffect(() => {
     axios
-      .get(`https:/www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+      .get(`https:/www.themealdb.com/api/json/v1/1/lookup.php?i=${queryId}`)
       .then((res) => setRecipe(res.data.meals[0]))
-  }, [id])
+  }, [queryId])
 
   return (
     recipe && (
