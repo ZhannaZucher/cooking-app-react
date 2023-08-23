@@ -1,0 +1,36 @@
+article {
+	@include verticalCenter;
+	justify-content: flex-start;
+	max-width: 380px;
+	width: 100%;
+	height: 500px;
+	background: $color3;
+	border-radius: 10px;
+	margin: 0 auto;
+	h2 {
+		color: $color4;
+		font-size: 1.4em;
+		font-weight: bold;
+		margin: 16px 0 8px;
+	}
+	h3 {
+		margin: 8px;
+	}
+	img {
+		width: 80%;
+		height: 200px;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+	p {
+		padding-top: 16px;
+		font-size: 1.2em;
+		width: 80%;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 9;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		line-height: 20px;
+	}
+}
