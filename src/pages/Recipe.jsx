@@ -32,7 +32,7 @@ const Recipe = () => {
 
   useEffect(() => {
     axios
-      .get(`https:/www.themealdb.com/api/json/v1/1/lookup.php?i=${queryId}`)
+      .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${queryId}`)
       .then((res) => setRecipe(res.data.meals[0]))
   }, [queryId])
 
