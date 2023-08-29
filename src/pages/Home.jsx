@@ -16,8 +16,9 @@ const Home = () => {
   return (
     <div className="home-wrapper">
       <form>
-        <label htmlFor="search"></label>
+        <label htmlFor="recipe-search"></label>
         <input
+          id="recipe-search"
           type="text"
           placeholder="search an ingredient"
           onChange={(e) => setQuery(e.target.value)}
